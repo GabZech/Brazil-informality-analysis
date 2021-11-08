@@ -28,9 +28,13 @@ df_informal <- df_subgroups %>%
   select(Month, Group, Informal, "Total average (across all groups)") %>% 
   mutate(Group = str_remove(Group, " - informal")) 
 
+# change locale to get name of months in English
+Sys.setlocale("LC_TIME", "English")
+
 full_join(df_formal, df_informal) %>%
   select(Month, Group, Formal, Informal, "Total average (across all groups)") %>% 
-  # replace(is.na(.), "-") %>% 
+  #replace(is.na(.), 0) %>% 
+  mutate(Month = format(Month, format="%b-%Y")) %>% 
   write_csv("../data/output/grid_percentage_change.csv")
 
 ```
