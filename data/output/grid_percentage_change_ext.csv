@@ -1,0 +1,109 @@
+Month,Group,Formal,Informal,Total average (across all groups)
+Mar-2020,Employed (private sector),0.5,-0.9,0.4
+Mar-2020,Domestic workers,-7.2,-0.2,0.4
+Mar-2020,Employers,-0.1,-5.6,0.4
+Mar-2020,Self-employed,14.3,-1.4,0.4
+Mar-2020,Employed (public sector),2.6,NA,0.4
+Apr-2020,Employed (private sector),-2.8,-9.7,-3.4
+Apr-2020,Domestic workers,-11.2,-9.7,-3.4
+Apr-2020,Employers,-1.9,-13,-3.4
+Apr-2020,Self-employed,16.6,-6.7,-3.4
+Apr-2020,Employed (public sector),3.9,NA,-3.4
+May-2020,Employed (private sector),-6.4,-19,-7.5
+May-2020,Domestic workers,-17.3,-19.1,-7.5
+May-2020,Employers,-5.9,-20.3,-7.5
+May-2020,Self-employed,15.5,-12.2,-7.5
+May-2020,Employed (public sector),6.2,NA,-7.5
+Jun-2020,Employed (private sector),-9.2,-24.9,-10.7
+Jun-2020,Domestic workers,-20.7,-26.2,-10.7
+Jun-2020,Employers,-5.9,-23.9,-10.7
+Jun-2020,Self-employed,12.9,-15.9,-10.7
+Jun-2020,Employed (public sector),6,NA,-10.7
+Jul-2020,Employed (private sector),-11.3,-25.4,-12.3
+Jul-2020,Domestic workers,-21.8,-28.8,-12.3
+Jul-2020,Employers,-6.2,-20.9,-12.3
+Jul-2020,Self-employed,8,-16.5,-12.3
+Jul-2020,Employed (public sector),3.5,NA,-12.3
+Aug-2020,Employed (private sector),-12,-25.8,-12.8
+Aug-2020,Domestic workers,-24.7,-28.6,-12.8
+Aug-2020,Employers,-8.3,-18.2,-12.8
+Aug-2020,Self-employed,4.5,-15.4,-12.8
+Aug-2020,Employed (public sector),2.1,NA,-12.8
+Sep-2020,Employed (private sector),-11.2,-23.9,-12.1
+Sep-2020,Domestic workers,-24.7,-27.2,-12.1
+Sep-2020,Employers,-11,-14.7,-12.1
+Sep-2020,Self-employed,4.4,-14.7,-12.1
+Sep-2020,Employed (public sector),1.2,NA,-12.1
+Oct-2020,Employed (private sector),-10.4,-20.1,-10.4
+Oct-2020,Domestic workers,-26.5,-25,-10.4
+Oct-2020,Employers,-12,-16.3,-10.4
+Oct-2020,Self-employed,6.9,-12,-10.4
+Oct-2020,Employed (public sector),2.7,NA,-10.4
+Nov-2020,Employed (private sector),-10.3,-17.6,-9.4
+Nov-2020,Domestic workers,-28.1,-23.3,-9.4
+Nov-2020,Employers,-11.7,-16.6,-9.4
+Nov-2020,Self-employed,7.8,-10.5,-9.4
+Nov-2020,Employed (public sector),4.3,NA,-9.4
+Dec-2020,Employed (private sector),-11.2,-15.8,-8.9
+Dec-2020,Domestic workers,-27.6,-21,-8.9
+Dec-2020,Employers,-10.2,-18.6,-8.9
+Dec-2020,Self-employed,8.9,-8.9,-8.9
+Dec-2020,Employed (public sector),4.5,NA,-8.9
+Jan-2021,Employed (private sector),-11.6,-16,-8.6
+Jan-2021,Domestic workers,-24.2,-20.4,-8.6
+Jan-2021,Employers,-11.4,-16.8,-8.6
+Jan-2021,Self-employed,5.9,-7.1,-8.6
+Jan-2021,Employed (public sector),4.5,NA,-8.6
+Feb-2021,Employed (private sector),-11.7,-15.9,-8.3
+Feb-2021,Domestic workers,-23.7,-19.9,-8.3
+Feb-2021,Employers,-11.9,-15.4,-8.3
+Feb-2021,Self-employed,8.2,-6.6,-8.3
+Feb-2021,Employed (public sector),5.1,NA,-8.3
+Mar-2021,Employed (private sector),-10.7,-12.1,-7.1
+Mar-2021,Domestic workers,-18,-17.1,-7.1
+Mar-2021,Employers,-13.7,-15.8,-7.1
+Mar-2021,Self-employed,7.8,-4,-7.1
+Mar-2021,Employed (public sector),1.4,NA,-7.1
+Apr-2021,Employed (private sector),-8.1,-3.7,-3.7
+Apr-2021,Domestic workers,-14.3,-8.8,-3.7
+Apr-2021,Employers,-10.2,-10.9,-3.7
+Apr-2021,Self-employed,5.9,1.9,-3.7
+Apr-2021,Employed (public sector),-0.7,NA,-3.7
+May-2021,Employed (private sector),-4.2,6.4,0.9
+May-2021,Domestic workers,-8.2,3.2,0.9
+May-2021,Employers,-7.8,-7.3,0.9
+May-2021,Self-employed,6.2,9.6,0.9
+May-2021,Employed (public sector),-2.5,NA,0.9
+Jun-2021,Employed (private sector),0.1,16,5.3
+Jun-2021,Domestic workers,-7,14.9,5.3
+Jun-2021,Employers,-5.9,3.9,5.3
+Jun-2021,Self-employed,7.3,17.1,5.3
+Jun-2021,Employed (public sector),-4.4,NA,5.3
+Jul-2021,Employed (private sector),4.2,19,8.6
+Jul-2021,Domestic workers,-4.1,24.7,8.6
+Jul-2021,Employers,-7.4,7.1,8.6
+Jul-2021,Self-employed,15.3,18.3,8.6
+Jul-2021,Employed (public sector),-2.7,NA,8.6
+Aug-2021,Employed (private sector),6.8,23.3,10.4
+Aug-2021,Domestic workers,3,28.7,10.4
+Aug-2021,Employers,-5.1,6.9,10.4
+Aug-2021,Self-employed,18.5,17.9,10.4
+Aug-2021,Employed (public sector),-2.7,NA,10.4
+Mar-2020,Family workers,NA,-10.5,0.4
+Apr-2020,Family workers,NA,-11.2,-3.4
+May-2020,Family workers,NA,-13,-7.5
+Jun-2020,Family workers,NA,-15.5,-10.7
+Jul-2020,Family workers,NA,-15,-12.3
+Aug-2020,Family workers,NA,-11.2,-12.8
+Sep-2020,Family workers,NA,-5.9,-12.1
+Oct-2020,Family workers,NA,-4.2,-10.4
+Nov-2020,Family workers,NA,-0.7,-9.4
+Dec-2020,Family workers,NA,0.9,-8.9
+Jan-2021,Family workers,NA,5.2,-8.6
+Feb-2021,Family workers,NA,2.9,-8.3
+Mar-2021,Family workers,NA,5.1,-7.1
+Apr-2021,Family workers,NA,5.4,-3.7
+May-2021,Family workers,NA,7.9,0.9
+Jun-2021,Family workers,NA,8.7,5.3
+Jul-2021,Family workers,NA,7.2,8.6
+Aug-2021,Family workers,NA,5.2,10.4
