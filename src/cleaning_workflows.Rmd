@@ -1,0 +1,37 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r cars}
+library(tidyverse)
+library(readxl)
+library(openxlsx)
+
+df <- read_excel("../data/processing/plots.xlsx", sheet="variacao full")
+
+df_subgroups <- df %>% 
+  select(-c("Employed", "Employed (private sector)", "Domestic workers",
+           "Employed (public sector)",	"Employed (public sector) - formal",	"Employed (public sector) - informal",	"Employed (public sector), military and statutory civil servant",	"Employers", "Self-employed"
+           ))
+
+df_formal <- df_subgroups %>%
+  pivot_longer(cols = c("Employed (private sector) - formal", "Domestic workers - formal", "Employers - formal", "Self-employed - formal"),
+               names_to = "Group", values_to = "Formal") %>% 
+  select(Month, Group, Formal, "Total average (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - formal")) 
+
+
+df_informal <- df_subgroups %>% 
+  pivot_longer(cols = c("Employed (private sector) - informal", "Domestic workers - informal", "Employers - informal", "Self-employed - informal", "Family workers"),
+               names_to = "Group", values_to = "Informal") %>% 
+  select(Month, Group, Informal, "Total average (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - informal")) 
+
+full_join(df_formal, df_informal) %>%
+  select(Month, Group, Formal, Informal, "Total average (across all groups)") %>% 
+  # replace(is.na(.), "-") %>% 
+  write_csv("../data/output/grid_percentage_change.csv")
+
+```
+
