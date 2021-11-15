@@ -3,11 +3,13 @@ title: "Untitled"
 output: html_document
 ---
 
-```{r cars}
+```{r import}
 library(tidyverse)
 library(readxl)
 library(openxlsx)
+```
 
+```{r}
 df <- read_excel("../data/processing/plots.xlsx", sheet="variacao full")
 
 df_subgroups <- df %>% 
@@ -37,5 +39,73 @@ full_join(df_formal, df_informal) %>%
   mutate(Month = format(Month, format="%b-%Y")) %>% 
   write_csv("../data/output/grid_percentage_change.csv")
 
+```
+
+```{r}
+df <- read_excel("../data/processing/plots.xlsx", sheet="variacao full")
+
+df_subgroups <- df %>% 
+  select(-c("Employed", "Employed (private sector)", "Domestic workers",
+           	"Employed (public sector) - formal",	"Employed (public sector) - informal",	"Employed (public sector), military and statutory civil servant",	"Employers", "Self-employed"
+           ))
+
+df_formal <- df_subgroups %>%
+  pivot_longer(cols = c("Employed (private sector) - formal", "Domestic workers - formal", "Employers - formal", "Self-employed - formal", "Employed (public sector)"),
+               names_to = "Group", values_to = "Formal") %>% 
+  select(Month, Group, Formal, "Total average (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - formal")) 
+
+
+df_informal <- df_subgroups %>% 
+  pivot_longer(cols = c("Employed (private sector) - informal", "Domestic workers - informal", "Employers - informal", "Self-employed - informal", "Family workers"),
+               names_to = "Group", values_to = "Informal") %>% 
+  select(Month, Group, Informal, "Total average (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - informal")) 
+
+# change locale to get name of months in English
+Sys.setlocale("LC_TIME", "English")
+
+full_join(df_formal, df_informal) %>%
+  select(Month, Group, Formal, Informal, "Total average (across all groups)") %>% 
+  #replace(is.na(.), 0) %>% 
+  mutate(Month = format(Month, format="%b-%Y")) %>% 
+  write.xlsx ("../data/output/grid_percentage_change_ext.xlsx", overwrite = T, keepNA = TRUE)
+```
+```{r}
+
+# GRID OF CHANGE IN RELATION TO BEGINNING OF PANDEMIC
+
+df <- read_excel("../data/processing/plots.xlsx", sheet="absoluto change")
+
+# remove undesired columns
+df_subgroups <- df %>% 
+  select(-c("Employed", "Employed (private sector)", "Domestic workers",
+           	"Employed (public sector) - formal",	"Employed (public sector) - informal",	"Employed (public sector), military and statutory civil servant",	"Employers", "Self-employed"
+           ))
+
+# create column with group name (pivot longer)
+df_formal <- df_subgroups %>%
+  pivot_longer(cols = c("Employed (private sector) - formal", "Domestic workers - formal", "Employers - formal", "Self-employed - formal", "Employed (public sector)"),
+               names_to = "Group", values_to = "Formal") %>% 
+  select(Month, Group, Formal, "Total (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - formal")) 
+
+
+df_informal <- df_subgroups %>% 
+  pivot_longer(cols = c("Employed (private sector) - informal", "Domestic workers - informal", "Employers - informal", "Self-employed - informal", "Family workers"),
+               names_to = "Group", values_to = "Informal") %>% 
+  select(Month, Group, Informal, "Total (across all groups)") %>% 
+  mutate(Group = str_remove(Group, " - informal")) 
+
+# change locale to get name of months in English
+Sys.setlocale("LC_TIME", "English")
+
+full_join(df_formal, df_informal) %>%
+  select(Month, Group, Formal, Informal, "Total (across all groups)") %>% 
+  #replace(is.na(.), 0) %>% 
+  mutate(Month = format(Month, format="%b-%Y")) %>% 
+  rename("Total average (across all groups)" = "Total (across all groups)") %>% 
+  write.xlsx ("../data/output/grid_percentage_change_ext.xlsx", overwrite = T, keepNA = TRUE)
+```
 ```
 
