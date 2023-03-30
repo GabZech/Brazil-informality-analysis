@@ -107,5 +107,20 @@ full_join(df_formal, df_informal) %>%
   rename("Total average (across all groups)" = "Total (across all groups)") %>% 
   write.xlsx ("../data/output/grid_percentage_change_ext.xlsx", overwrite = T, keepNA = TRUE)
 ```
+
+```{r}
+months <- c("08","09","10","11","12")
+
+for (month in months) {
+  url <- paste0("https://www.portaltransparencia.gov.br/download-de-dados/auxilio-emergencial/2020", month)
+  print(paste0(basename(url), "_AuxilioEmergencial.zip"))
+  download.file(url, destfile = paste0(basename(url), "_AuxilioEmergencial.zip"))
+}
+
+# url <- "https://www.portaltransparencia.gov.br/download-de-dados/auxilio-emergencial/202007"
+# download.file(url, destfile = basename(url), method="curl", extra="-k")
 ```
+
+
+
 
